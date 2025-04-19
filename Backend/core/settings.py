@@ -5,11 +5,9 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-GROQ_API_KEY = os.getenv('GROQ_API_KEY')
-
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-it_2m43mu0777&ih*wsjj(^c#^0h@cm8xsh75=3h+lv)2pxn)$'
+SECRET_KEY = 'django-insecure-it_452m43mu0777&ih*wsjj(^c#^0h@cm8xsh75=3h+lv)2pxn)$'
 
 DEBUG = True
 
@@ -98,26 +96,6 @@ SIMPLE_JWT = {
 
 WSGI_APPLICATION = 'core.wsgi.application'
 
-# DATABASE CONFIGURATION
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'aivis',
-        'USER': 'postgres',
-        'PASSWORD': '52-IsB_24',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
-}
-
-# EMAIL CONFIGURATION 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'mjconnect.solutions@gmail.com'
-EMAIL_HOST_PASSWORD = '52-IsB_25'
-
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -154,9 +132,3 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-AZURE_SPEECH_KEY = '1JJ3FlHJyQWky4QtvopDo2MF94FXoXYryKTSglxwNg1DfAZRuJ48JQQJ99BCACYeBjFXJ3w3AAAYACOGJfEf'
-AZURE_SPEECH_REGION = 'eastus' 
-
-CELERY_BROKER_URL = 'redis://localhost:6379/0'
-CELERY_RESULT_BACKEND = 'redis://localhost:6379/1'
